@@ -78,3 +78,6 @@
     setTimeout(triggerEnter, 600);
   }
 });
+setTimeout(() => {
+  document.querySelector(".dvds").classList.add("juntos");
+}, 2000); // 2s depois

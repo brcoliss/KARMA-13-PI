@@ -21,7 +21,8 @@ body {
  transform: translateX(-50%);
  display: flex;
  gap: 20px;              
- z-index: 10;           
+ z-index: 10;         
+ border-radius: 200px;  
 }
 .poster {
  position: absolute;
@@ -92,8 +93,15 @@ body {
  top: -100px;
  transition: none;
  position: relative;
- transform: translateX(-40px);
+ transform: scale(0,5);
+ opacity: 0;
+   animation: girar 3s linear infinite, juntar 2s ease forwards;
+    gap: 100px;
+
  }
+ .dvds.juntos {
+  gap: 10px; 
+}
 
 
 .dvd.in {
@@ -107,6 +115,23 @@ body {
    50% { opacity: 1; transform: rotate(360deg) scale(1.1); }
    100% { opacity: 1; transform: rotate(720deg) scale(1); }
  }
+
+ @keyframes juntar {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  
+}
 
 .dvd.left {
   animation: entrarEsquerda 4s ease forwards;
