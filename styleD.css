@@ -1,0 +1,280 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+body {
+  /* Imagem de fundo fixa e gradiente preto suave */
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0) 100%), url('Karma 13 Infos/Fotos/show-2.aajpg.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.video-container {
+ position: absolute;
+ top: 550px;        
+ left: 50%;
+ transform: translateX(-50%);
+ display: flex;
+ gap: 20px;              
+ z-index: 10;           
+}
+.poster {
+ position: absolute;
+ top: 550px;        
+ left: 50%;
+ transform: translateX(-50%);
+ display: flex;
+ gap: 30px;              
+ z-index: 10;   
+ top: 1000px;   
+ left: 50%;
+ transform: translateX(-50%);
+ width: 700px;
+ height:1000px;
+ pointer-events: none;
+ border-radius: 10px;
+ top: 1150px;
+ left: 50%;
+ transform: translateX(-50%);
+ justify-content: center;
+  z-index: 10;
+}
+
+ .dvds {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+  position: relative;
+  top: -744px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+   height: calc(var(--cd-size) + 20px);
+   overflow:visible;
+ }
+
+  .dvds :hover {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+  position: relative;
+  top: -1900px;
+  left: 50%;
+  transform: translateX(50%);
+  padding: 20px;
+  border-radius: 10px;
+
+   height: calc(var(--cd-size) + 20px);
+   overflow:visible;
+  cursor: pointer;
+
+ }
+
+ .dvd {
+ width: 500px;
+ height: 300px;
+ border-radius: 50%;
+ background: url('Karma 13 Infos/Icons/cd.png') no-repeat center/cover; 
+ animation: girar 2s linear;
+ animation-fill-mode: forwards;
+ opacity: 0;
+ transform: rotate(0deg);
+ cursor: pointer;
+ top: -100px;
+ transition: none;
+ position: relative;
+ transform: translateX(-40px);
+ }
+
+
+.dvd.in {
+  opacity: 1;
+  transform: translateX(0) rotate(0deg) scale(1);
+  transition: transform 4s ease, opacity 4s ease;
+}
+
+  @keyframes girar {
+  0% { opacity: 0; transform: rotate(0deg) scale(0.5); }
+   50% { opacity: 1; transform: rotate(360deg) scale(1.1); }
+   100% { opacity: 1; transform: rotate(720deg) scale(1); }
+ }
+
+.dvd.left {
+  animation: entrarEsquerda 4s ease forwards;
+}
+
+
+.dvd.right {
+  animation: entrarDireita 4s ease forwards;
+}
+
+@keyframes entrarEsquerda {
+  0% {
+    opacity: 0;
+    transform: translateX(-600px) rotate(-720deg) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg) scale(1);
+  }
+}
+
+@keyframes entrarDireita {
+  0% {
+    opacity: 0;
+    transform: translateX(600px) rotate(720deg) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg) scale(1);
+  }
+
+
+
+
+
+
+
+}
+ .modal {
+ display: none;
+ position: fixed;
+ top: 0; left: 0;
+ width: 100%; height: 100%;
+ background: rgba(0,0,0,0.8);
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ text-align: center;
+ z-index: 100;
+ }
+
+ .modal img {
+ max-width: 300px;
+ margin-bottom: 20px;
+ border-radius: 10px;
+ }
+
+ .close {
+ margin-top: 10px;
+ padding: 10px 20px;
+ background: red;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer;
+ color: white;
+ font-weight: bold;
+ } 
+
+  /* Animações */
+  @keyframes entrarEsquerda {
+    0% { opacity: 0; transform: translateX(-200px) rotate(0deg) scale(0.5); }
+    100% { opacity: 1; transform: translateX(0) rotate(720deg) scale(1); }
+  } 
+  @keyframes entrarDireita {
+    0% { opacity: 0; transform: translateX(200px) rotate(0deg) scale(0.5); }
+    100% { opacity: 1; transform: translateX(0) rotate(720deg) scale(1); }
+  } 
+  .esquerda {
+    animation: entrarEsquerda 1.2s ease forwards;
+  } 
+  .direita {
+    animation: entrarDireita 1.2s ease forwards;
+  }
+
+
+.agenda {
+  position: absolute;
+  top: 2000px;        
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 20px;              
+  z-index: 10;  
+  padding: 20px;
+  border-radius: 10px;
+  width: 500px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 700px;
+}
+.agenda h2 {
+  font-size: 45px;
+  margin-bottom: 10px;
+  color: rgb(253, 253, 253);
+  text-align: center;
+
+}
+.agenda ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+}
+
+.agenda li {
+  font-size: 25px;
+  margin-bottom: 5px;
+  color: rgb(250, 246, 246);
+  text-align: center;
+  padding: 10px;
+}
+
+.agenda li:hover {
+  background-color: rgba(60, 6, 255, 0.2);
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.agenda p {
+  font-size: 18px;
+  margin-top: 10px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.historia img {
+  width: 30000px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+ height: 10px;
+ border-radius: 200px;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+ margin-top: 20px;
+ margin-bottom: 20px;
+ z-index: 1;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);  
+  pointer-events: none;
+  margin-bottom: 200px;
+  margin-top: 200px;
+}
+.historia h2 {
+  font-size: 45px;
+  margin-bottom: 10px;
+  color: rgb(253, 253, 253);
+  text-align: center;
+  margin-top: -100px;
+  margin-top: 120px;
+}

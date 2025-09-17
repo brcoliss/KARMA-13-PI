@@ -1,0 +1,84 @@
+ body{
+margin: 0;
+padding: 0;
+justify-content: center;
+background-color: rgb(252, 252, 252);
+overflow-x: hidden;
+height: 1px;
+ }
+
+.hero {
+   background-size: cover;
+  height: 2000px;
+  width: 100%;
+  background-attachment: fixed;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ position: relative;
+ overflow: hidden;
+ color: rgb(0, 0, 0);
+ font-size: 24px;
+ padding: 20px;
+ box-sizing: border-box;
+ margin-bottom: 1000px;
+ margin-top: -50px;
+ margin-left: -8px;
+ margin-right: -8px;
+ border-bottom-left-radius: 50px;
+ border-bottom-right-radius: 50px;
+ z-index: 10px;
+ 
+
+}
+
+.logo {
+ position: absolute;
+ top: 40px;   
+ left: 50%;   
+ transform: translateX(-50%);
+ width: 350px; 
+ background: transparent; 
+ pointer-events: none;
+ width:840px;
+ margin-bottom: 1000px;
+ top: -298px;
+ 
+ }
+
+.logo-contaniner{
+ position: relative;
+width: 1000px; 
+ }
+
+.social-icons {
+ position: absolute;
+ top: 267px;        
+ left: 50%;
+ transform: translateX(-50%);
+ display: flex;
+ gap: 20px;              
+ z-index: 10;           
+}
+.social-icons a {
+ color: white;
+ font-size: 40px;
+ text-decoration: none;
+ background: none;       
+ padding: 0;             
+ border-radius: 0;       
+ box-shadow: none;       
+}
+
+  .social-icons a:hover {
+ transform: scale(1.2);
+  }
+  .historia img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    z-index: 1;
+  }
